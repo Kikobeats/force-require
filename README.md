@@ -37,10 +37,10 @@ Object parameter can be:
 ## Examples
 
 ```coffee
-lodash = forceRequire name:'async'
-lodash = forceRequire name:'async', version: '0.5.0'
-lodash = forceRequire name:'async', version: '0.5.0', force: 'true'
-lodash = forceRequire repository: 'caolan/async', force: 'true', 
+async = forceRequire name:'async'
+async = forceRequire name:'async', version: '0.5.0'
+async = forceRequire name:'async', version: '0.5.0', force: 'true'
+async = forceRequire repository: 'caolan/async', force: 'true', 
 ```
 
 ## License
