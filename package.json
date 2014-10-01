@@ -1,0 +1,29 @@
+{
+  "name": "force-require",
+  "description": "Ensure that dependency is resolved",
+  "version": "0.0.1",
+  "author": {
+    "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
+    "url": "https://github.com/Kikobeats"
+  },
+  "dependencies": {
+    "coffee-script": "*",
+    "fs-extra": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": ["npm", "dependency", "resolve"],
+  "license": "MIT",
+  "main": "./index.js",
+  "repository": "Kikobeats/forcerequire",
+  "scripts": {
+    "test": "sh test/test.sh",
+    "prepublish": "npm prune"
+  }
+}
