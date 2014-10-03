@@ -1,7 +1,7 @@
 {
   "name": "force-require",
-  "description": "Ensure that dependency is resolved",
-  "version": "0.0.1",
+  "description": "Ensure that a dependency is always resolved",
+  "version": "0.0.2",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -18,10 +18,9 @@
   "engines": {
     "node": "*"
   },
-  "keywords": ["npm", "dependency", "resolve"],
+  "keywords": ["npm", "dependency", "resolved"],
   "license": "MIT",
-  "main": "./index.js",
-  "repository": "Kikobeats/forcerequire",
+  "repository": "Kikobeats/force-require",
   "scripts": {
     "test": "sh test/test.sh",
     "prepublish": "npm prune"
