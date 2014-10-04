@@ -1,36 +1,71 @@
 ## -- Dependencies -------------------------------------------------------------
+
 forceRequire = require '../lib/forceRequire'
 depHelper    = require '../lib/dependencyHelper'
 should       = require 'should'
-dependency   = 'async'
-version      = '0.5.0'
-repository   = 'caolan/async'
+
+DEPENDENCY =
+  NAME_ONE: 'force-require-test'
+  NAME_TWO: 'async'
+  NAME_THREE: 'force-require-test-without'
+  VERSION : '2.0.0'
+  REPOSITORY: 'caolan/async'
+
 
 ## -- Tests -------------------------------------------------------------
+
 describe 'ForceRequire ::', ->
 
-  beforeEach (done) ->
-    depHelper.removeDependency dependency
+  before (done) ->
+    depHelper.removeDependency DEPENDENCY.NAME_ONE
+    depHelper.removeDependency DEPENDENCY.NAME_TWO
+    depHelper.removeDependency DEPENDENCY.NAME_THREE
     done()
 
-  it 'resolved locally', (done) ->
-    forceRequire.start(name: 'mocha')
+  it 'require a dependency that doesnt exist', (done) ->
+    test = forceRequire.start DEPENDENCY.NAME_ONE
+    status = depHelper.isVersion(DEPENDENCY.NAME_ONE, '2.0.0')
+    status.should.eql true
+    test.should.have.property 'hello'
     done()
 
-  it 'resolved only with the name', (done) ->
-    forceRequire.start('mocha')
+  it 'require a dependency that exist', (done) ->
+    test = forceRequire.start DEPENDENCY.NAME_ONE
+    status = depHelper.isVersion(DEPENDENCY.NAME_ONE, '2.0.0')
+    status.should.eql true
+    test.should.have.property 'hello'
     done()
 
-  it 'resolved installing from npm', (done) ->
-    forceRequire.start(name: dependency)
+  # At this moment this feature is not support because when you require a module
+  # is in dynamic memory. Need to empty and load the new version of the module...
+  # memory...
+  xit 'require a dependency that exist but the version is not the same', (done) ->
+    test = forceRequire.start name: DEPENDENCY.NAME, version: '1.0.0'
+    status = depHelper.isVersion(DEPENDENCY.NAME, '1.0.0')
+    status.should.eql true
+    test.should.have.property 'hello'
     done()
 
-  xit 'resolved installing from npm and specific version', (done) ->
-    forceRequire.start(name: dependency, version: version)
-    pkg = require "#{dependency}/package.json"
-    pkg.version.should.eql version
+  it 'require a dependency fetching from github repository that doesnt exist', (done) ->
+    test = forceRequire.start(name: DEPENDENCY.NAME_TWO, repository: DEPENDENCY.REPOSITORY)
+    test.should.have.property 'each'
     done()
 
-  it 'resolved installing from repository', (done) ->
-    forceRequire.start(name: dependency, repository: repository, force: 'true')
+  it 'require a dependency fetching from github repository that exists', (done) ->
+    test = forceRequire.start(name: DEPENDENCY.NAME_TWO, repository: DEPENDENCY.REPOSITORY)
+    test.should.have.property 'each'
+    done()
+
+  it 'require a dependency that doesnt have endpoint and doesnt exist', (done) ->
+    test = forceRequire.start(name: DEPENDENCY.NAME_THREE)
+    status = depHelper.isVersion(DEPENDENCY.NAME_THREE, '1.0.0')
+    test.should.eql false
+    status.should.eql true
+    done()
+
+  it 'require a dependency that doesnt have endpoint and exists', (done) ->
+    test = forceRequire.start(name: DEPENDENCY.NAME_THREE)
+    status = depHelper.isVersion(DEPENDENCY.NAME_THREE, '1.0.0')
+    test.should.eql false
+    status.should.eql true
     done()

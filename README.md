@@ -29,20 +29,27 @@ Now you can use like `require` command.
 
 Object parameter can be:
 
-* **name**: the name of the dependency to resolve.
-* **version**: the version of the dependency to resolve.
+* **name**: the name of the dependency to resolve. If is the unique attribute, is not necessary.
 * **repository**: You can resolve the dependency using Github repository instead of NPM package.
-* **force**: Ensure that the version of the dependency is the correct. If is not present, is possible that resolve the dependency but maybe is not the same version.
+* **production**: If is necessary to install a dependency, use npm `production` installer
+* **scope**: Set the scope. By default the scope is `process.cwd()`
 
 ## Examples
 
 ```coffee
 async = forceRequire 'async'
 async = forceRequire name:'async'
-async = forceRequire name:'async', version: '0.5.0'
-async = forceRequire name:'async', version: '0.5.0', force: 'true'
-async = forceRequire repository: 'caolan/async', force: 'true',
+async = forceRequire repository: 'caolan/async'
+async = forceRequire repository: 'caolan/async', production: true
+async = forceRequire repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
 ```
+
+## About version parameter
+
+At this moment `version` parameter for fetch different package version is not supported.
+
+When you load a package, the package is in dynamic memory. To load another version of the package can be resolved using [node virtual machine](http://www.davidmclifton.com/2011/08/18/node-js-virtual-machine-vm-usage/) for instance the different version in other scope and return it.
+
 
 ## License
 

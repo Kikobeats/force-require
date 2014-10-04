@@ -13,13 +13,20 @@ class ForceRequire
       options = {}
       options.name = aux
 
-    depHelper.removeDependency options.name if options.force
+    process.chdir(options.scope) if options.scope
 
     try
-      dependency = depHelper.requireDependency options.name
+      depHelper.requireDependency options.name
+
     catch e
-      depHelper.installDependency(options)
-      dependency = depHelper.requireDependency options.name
+      unless depHelper.existDependency(options.name)
+        depHelper.installDependency(options)
+        try
+          depHelper.requireDependency options.name
+        catch e
+          false
+      else
+        false
 
 ## -- Exports -------------------------------------------------------------
 
