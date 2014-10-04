@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "coffee-script": "*",
-    "fs-extra": "*"
+    "fs-extra": "*",
+    "execSync": "*"
   },
   "devDependencies": {
     "mocha": "*",
