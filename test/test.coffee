@@ -1,5 +1,6 @@
 ## -- Dependencies -------------------------------------------------------------
 forceRequire = require '../lib/forceRequire'
+depHelper    = require '../lib/dependencyHelper'
 should       = require 'should'
 dependency   = 'async'
 version      = '0.5.0'
@@ -9,11 +10,15 @@ repository   = 'caolan/async'
 describe 'ForceRequire ::', ->
 
   beforeEach (done) ->
-    forceRequire._removeDependency dependency
+    depHelper.removeDependency dependency
     done()
 
   it 'resolved locally', (done) ->
     forceRequire.start(name: 'mocha')
+    done()
+
+  it 'resolved only with the name', (done) ->
+    forceRequire.start('mocha')
     done()
 
   it 'resolved installing from npm', (done) ->
