@@ -1,8 +1,8 @@
 # Force Require
 
-[![Build Status](http://img.shields.io/travis/Kikobeats/forcerequire/master.svg?style=flat)](https://travis-ci.org/Kikobeats/forcerequire)
-[![Dependency status](http://img.shields.io/david/Kikobeats/forcerequire.svg?style=flat)](https://david-dm.org/Kikobeats/forcerequire)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/forcerequire.svg?style=flat)](https://david-dm.org/Kikobeats/forcerequire#info=devDependencies)
+[![Build Status](http://img.shields.io/travis/Kikobeats/force-require/master.svg?style=flat)](https://travis-ci.org/Kikobeats/forcerequire)
+[![Dependency status](http://img.shields.io/david/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/forcerequire)
+[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/forcerequire#info=devDependencies)
 [![NPM Status](http://img.shields.io/npm/dm/forcerequire.svg?style=flat)](https://www.npmjs.org/package/forcerequire)
 [![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 
