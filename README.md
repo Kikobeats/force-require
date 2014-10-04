@@ -6,7 +6,7 @@
 [![NPM Status](http://img.shields.io/npm/dm/forcerequire.svg?style=flat)](https://www.npmjs.org/package/forcerequire)
 [![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 
-> Ensure that a dependency is always resolved.
+> Ensure that a NPM dependency is resolved.
 
 ## Install
 
@@ -37,6 +37,7 @@ Object parameter can be:
 ## Examples
 
 ```coffee
+async = forceRequire 'async'
 async = forceRequire name:'async'
 async = forceRequire name:'async', version: '0.5.0'
 async = forceRequire name:'async', version: '0.5.0', force: 'true'
