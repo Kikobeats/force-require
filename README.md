@@ -39,9 +39,9 @@ Object parameter can be:
 ```coffee
 async = forceRequire 'async'
 async = forceRequire name:'async'
-async = forceRequire repository: 'caolan/async'
-async = forceRequire repository: 'caolan/async', production: true
-async = forceRequire repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
+async = forceRequire name:'async', repository: 'caolan/async'
+async = forceRequire name:'async', repository: 'caolan/async', production: true
+async = forceRequire name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
 ```
 
 ## About version parameter
