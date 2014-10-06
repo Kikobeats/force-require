@@ -3,7 +3,7 @@
 [![Build Status](http://img.shields.io/travis/Kikobeats/force-require/master.svg?style=flat)](https://travis-ci.org/Kikobeats/force-require)
 [![Dependency status](http://img.shields.io/david/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/force-require)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/force-require#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/forcerequire.svg?style=flat)](https://www.npmjs.org/package/forcer-equire)
+[![NPM Status](http://img.shields.io/npm/dm/force-require.svg?style=flat)](https://www.npmjs.org/package/forcer-equire)
 [![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
 
 > Ensure that a NPM dependency is resolved.
@@ -25,7 +25,7 @@ Now you can use like `require` command.
 
 ## API
 
-### forceRequire(\<Object>)
+### force-require(\<Object>)
 
 Object parameter can be:
 
@@ -37,11 +37,11 @@ Object parameter can be:
 ## Examples
 
 ```coffee
-async = forceRequire 'async'
-async = forceRequire name:'async'
-async = forceRequire name:'async', repository: 'caolan/async'
-async = forceRequire name:'async', repository: 'caolan/async', production: true
-async = forceRequire name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
+async = force-require 'async'
+async = force-require name:'async'
+async = force-require name:'async', repository: 'caolan/async'
+async = force-require name:'async', repository: 'caolan/async', production: true
+async = force-require name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
 ```
 
 ## About version parameter
