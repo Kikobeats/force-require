@@ -37,11 +37,11 @@ Object parameter can be:
 ## Examples
 
 ```coffee
-async = force-require 'async'
-async = force-require name:'async'
-async = force-require name:'async', repository: 'caolan/async'
-async = force-require name:'async', repository: 'caolan/async', production: true
-async = force-require name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
+async = forceRequire 'async'
+async = forceRequire name:'async'
+async = forceRequire name:'async', repository: 'caolan/async'
+async = forceRequire name:'async', repository: 'caolan/async', production: true
+async = forceRequire name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
 ```
 
 ## About version parameter
