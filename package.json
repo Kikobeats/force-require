@@ -1,29 +1,32 @@
 {
   "name": "force-require",
   "description": "Ensure that a dependency is always resolved",
-  "version": "0.10.7",
+  "version": "0.2.0",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
     "url": "https://github.com/Kikobeats"
   },
+  "repository": "Kikobeats/force-require",
+  "keywords": [
+    "npm",
+    "dependency",
+    "resolved"
+  ],
   "dependencies": {
     "coffee-script": "*",
-    "fs-extra": "*",
-    "execSync": "*"
+    "oh-my-terminal": "*"
   },
   "devDependencies": {
+    "fs-extra": "*",
     "mocha": "*",
     "should": "*"
   },
   "engines": {
-    "node": "*"
+    "node": "0.12.x"
   },
-  "keywords": ["npm", "dependency", "resolved"],
-  "license": "MIT",
-  "repository": "Kikobeats/force-require",
   "scripts": {
-    "test": "sh test/test.sh",
-    "prepublish": "npm prune"
-  }
+    "test": "sh test/test.sh"
+  },
+  "license": "MIT"
 }

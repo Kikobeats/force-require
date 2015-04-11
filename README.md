@@ -18,41 +18,23 @@ npm install force-require --save
 
 First load the library:
 
-```coffee
-forceRequire = require 'force-require'
+```js
+var forceRequire = require('force-require');
 ```
 Now you can use like `require` command.
 
 ## API
 
-### force-require(\<Object>)
+### force-require(&lt;String&gt;)
 
-Object parameter can be:
+Try to load a dependency based in the name. Internally the library:
 
-* **name**: the name of the dependency to resolve. If is the unique attribute, is not necessary.
-* **repository**: You can resolve the dependency using Github repository instead of NPM package.
-* **production**: If is necessary to install a dependency, use npm `production` installer
-* **scope**: Set the scope. By default the scope is `process.cwd()`
-
-## Examples
-
-```coffee
-async = forceRequire 'async'
-async = forceRequire name:'async'
-async = forceRequire name:'async', repository: 'caolan/async'
-async = forceRequire name:'async', repository: 'caolan/async', production: true
-async = forceRequire name:'async', repository: 'caolan/async', production: true, scope: process.cwd() + '/testApp'
-```
-
-## About version parameter
-
-At this moment `version` parameter for fetch different package version is not supported.
-
-When you load a package, the package is in dynamic memory. To load another version of the package can be resolved using [node virtual machine](http://www.davidmclifton.com/2011/08/18/node-js-virtual-machine-vm-usage/) for instance the different version in other scope and return it.
-
+- Try to resolve the dependency locally.
+- Later try to resolve the dependency globally.
+- At the end, if not possible to resolve locally or globally. It install the dependency locally and resolve the request.
 
 ## License
 
-MIT © [Kiko Beats](http://www.kikobeats.com)
+MIT © [Kiko Beats](http://kikobeats.com)
 
 
