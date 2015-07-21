@@ -1,14 +1,17 @@
+'use strict'
+
 forceRequire = require '../lib'
 should       = require 'should'
 fs           = require 'fs-extra'
 path         = require 'path'
+deleteAssets = ->
+  fs.removeSync path.resolve 'node_modules', 'jshint'
+  fs.removeSync path.resolve 'node_modules', 'force-require-test'
 
 describe 'ForceRequire ::', ->
 
-  before (done) ->
-    fs.removeSync path.resolve 'node_modules', 'jshint'
-    fs.removeSync path.resolve 'node_modules', 'force-require-test'
-    done()
+  after deleteAssets
+  before deleteAssets
 
   it "require a dependency that exist locally", ->
     dep = forceRequire 'mocha'

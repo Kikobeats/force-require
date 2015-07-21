@@ -1,14 +1,20 @@
-path     = require 'path'
-terminal = require 'oh-my-terminal'
+'use strict'
+
+path          = require 'path'
+terminal      = require 'oh-my-terminal'
+globalNpmPath = require 'global-modules'
 
 module.exports =
 
-  requireLocally: (name, cb) ->
-    require "#{name}"
+  requireLocally: (dependency) ->
+    require dependency
 
-  requireGlobally: (name, cb) ->
-    terminal.exec "npm link #{name}"
-    @requireLocally name
+  requireGlobally: (dependency) ->
+    require "#{globalNpmPath}/#{dependency}"
 
-  install: ->
-    terminal.exec "npm install #{name}"
+  install: (dependency) ->
+    originalPath = process.cwd()
+    process.chdir globalNpmPath
+    terminal.exec "npm install #{dependency}"
+    process.chdir originalPath
+    this
