@@ -9,4 +9,4 @@ module.exports = (dependency, opts) ->
     try
       helper.requireGlobally dependency
     catch e
-      helper.installGlobally(dependency).requireGlobally(dependency)
+      helper.install(dependency).requireGlobally(dependency)
