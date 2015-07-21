@@ -31,7 +31,7 @@ Try to load a dependency based in the name. Internally the library:
 
 - Try to resolve the dependency locally.
 - Later try to resolve the dependency globally.
-- At the end, if not possible to resolve locally or globally. It install the dependency locally and resolve the request.
+- If not possible to resolve locally or globally, then the dependency will be installed globally and it's required.
 
 ## License
 
