@@ -1,7 +1,7 @@
 {
   "name": "force-require",
   "description": "Ensure that a dependency is always resolved",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
