@@ -1,12 +1,12 @@
 'use strict'
 
-helper = require './helper'
+{ requireLocally, requireGlobally, install } = require './helper'
 
 module.exports = (dependency, opts) ->
   try
-    helper.requireLocally dependency
+    requireLocally dependency
   catch e
     try
-      helper.requireGlobally dependency
+      requireGlobally dependency
     catch e
-      helper.install(dependency).requireGlobally(dependency)
+      install(dependency).requireGlobally(dependency)
