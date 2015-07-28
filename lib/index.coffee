@@ -16,7 +16,7 @@ install = (dependency) ->
   terminal.exec "npm install #{dependency}"
   process.chdir originalPath
 
-module.exports = (dependency, opts) ->
+module.exports = (dependency) ->
   try
     requireLocally dependency
   catch e
