@@ -1,7 +1,22 @@
+<a name="1.0.1"></a>
+## 1.0.1 (2015-07-31)
+
+
+* fixed tests
+ ([e785fe5](https://github.com/kikobeats/force-require/commit/e785fe5))
+* updated
+ ([1a09a6e](https://github.com/kikobeats/force-require/commit/1a09a6e))
+* updated dev dependencies
+ ([2d2a27e](https://github.com/kikobeats/force-require/commit/2d2a27e))
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2015-07-31)
 
 
+* 1.0.0 releases
+ ([ae4607d](https://github.com/kikobeats/force-require/commit/ae4607d))
 * little refactor. Removed unnecessary dependencies
  ([266a3b0](https://github.com/kikobeats/force-require/commit/266a3b0))
 * updated
