@@ -14,7 +14,6 @@
     "resolved"
   ],
   "dependencies": {
-    "coffee-script": "*",
     "global-modules": "*",
     "oh-my-terminal": "*"
   },
