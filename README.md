@@ -1,10 +1,11 @@
 # Force Require
 
-[![Build Status](http://img.shields.io/travis/Kikobeats/force-require/master.svg?style=flat)](https://travis-ci.org/Kikobeats/force-require)
-[![Dependency status](http://img.shields.io/david/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/force-require)
-[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/force-require.svg?style=flat)](https://david-dm.org/Kikobeats/force-require#info=devDependencies)
-[![NPM Status](http://img.shields.io/npm/dm/force-require.svg?style=flat)](https://www.npmjs.org/package/force-require)
-[![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat)](https://www.gittip.com/Kikobeats/)
+![Last version](https://img.shields.io/github/tag/Kikobeats/parse-json.svg?style=flat-square)
+[![Build Status](http://img.shields.io/travis/Kikobeats/force-require/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/force-require)
+[![Dependency status](http://img.shields.io/david/Kikobeats/force-require.svg?style=flat-square)](https://david-dm.org/Kikobeats/force-require)
+[![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/force-require.svg?style=flat-square)](https://david-dm.org/Kikobeats/force-require#info=devDependencies)
+[![NPM Status](http://img.shields.io/npm/dm/force-require.svg?style=flat-square)](https://www.npmjs.org/package/force-require)
+[![Gittip](http://img.shields.io/gittip/Kikobeats.svg?style=flat-square)](https://www.gittip.com/Kikobeats/)
 
 > Ensure that a NPM dependency is resolved.
 
