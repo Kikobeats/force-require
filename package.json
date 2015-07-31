@@ -18,6 +18,7 @@
     "oh-my-terminal": "*"
   },
   "devDependencies": {
+    "coffee-script": "*",
     "fs-extra": "*",
     "mocha": "*",
     "should": "*"
