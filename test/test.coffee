@@ -1,6 +1,7 @@
+
 'use strict'
 
-forceRequire = require '../lib'
+forceRequire = require '..'
 should       = require 'should'
 fs           = require 'fs-extra'
 path         = require 'path'
