@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "global-modules": "*",
-    "oh-my-terminal": "*"
+    "oh-my-terminal": "*",
+    "wrap-sync": "*"
   },
   "devDependencies": {
     "coffee-script": "*",

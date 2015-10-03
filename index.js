@@ -1,5 +1,6 @@
 'use strict';
 
+var wrapSync      = require('wrap-sync');
 var terminal      = require('oh-my-terminal');
 var globalNpmPath = require('global-modules');
 
@@ -19,7 +20,7 @@ var install = function(dependency) {
   return process.chdir(originalPath);
 };
 
-module.exports = function(dependency) {
+var requireSync = function(dependency) {
   try {
     return requireLocally(dependency);
   } catch (err) {
@@ -30,4 +31,11 @@ module.exports = function(dependency) {
       return requireGlobally(dependency);
     }
   }
+};
+
+var requireAsync = wrapSync(requireSync);
+
+module.exports = function(dependency, cb) {
+  if (!cb) return requireSync(dependency);
+  return requireAsync(dependency, cb);
 };
