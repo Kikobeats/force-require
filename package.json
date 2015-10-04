@@ -14,15 +14,14 @@
     "resolved"
   ],
   "dependencies": {
-    "global-modules": "*",
-    "oh-my-terminal": "*",
-    "wrap-sync": "*"
+    "global-modules": "latest",
+    "oh-my-terminal": "latest"
   },
   "devDependencies": {
-    "coffee-script": "*",
-    "fs-extra": "*",
-    "mocha": "*",
-    "should": "*"
+    "coffee-script": "latest",
+    "fs-extra": "latest",
+    "mocha": "latest",
+    "should": "latest"
   },
   "engines": {
     "node": ">= 0.10.0",

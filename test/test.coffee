@@ -1,15 +1,17 @@
 'use strict'
 
 forceRequire = require '..'
+path         = require 'path'
 should       = require 'should'
 fs           = require 'fs-extra'
-path         = require 'path'
+globalNpmPath = require 'global-modules'
 
-deleteAssets = ->
+deleteAssets = (cb) ->
   fs.removeSync path.resolve 'node_modules', 'jshint'
-  fs.removeSync path.resolve 'node_modules', 'force-require-test'
+  fs.removeSync path.resolve globalNpmPath, 'force-require-test'
+  cb?()
 
-describe 'forceRequire ::', ->
+describe 'force-require ::', ->
 
   after deleteAssets
   before deleteAssets
@@ -28,7 +30,5 @@ describe 'forceRequire ::', ->
       dep = forceRequire 'force-require-test'
       (typeof dep.hello).should.be.equal 'function'
 
-  describe 'integration', ->
-
-    it 'async mode', (done) ->
-      forceRequire 'mocha', done
+    it 'async interface', (done) ->
+      deleteAssets -> forceRequire 'mocha', done
