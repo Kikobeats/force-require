@@ -28,14 +28,16 @@ Now you can use like `require` command.
 
 ### force-require(&lt;String&gt;)
 
-Try to load a dependency based in the name. Internally the library:
+Try to load a dependency based in the name. Internally the library follow the next algorithm:
 
-- Try to resolve the dependency locally.
-- Later try to resolve the dependency globally.
-- If not possible to resolve locally or globally, then the dependency will be installed globally and it's required.
+1) Try to require the dependency locally. This means that exists in the current `process.cwd()/node_modules` folder
+as direct dependency or a dependency of another dependency.
+
+2) If not possible to resolve locally, then try to resolve globally in your system. Try to require the dependency globally
+using the module [global-modules](https://github.com/jonschlinkert/global-modules).
+
+3) At this poin of the algorithm, the dependency was not found. Let's install as global module and later require it.
 
 ## License
 
 MIT © [Kiko Beats](http://kikobeats.com)
-
-
