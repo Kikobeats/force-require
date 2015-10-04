@@ -26,9 +26,11 @@ Now you can use like `require` command.
 
 ## API
 
-### force-require(&lt;String&gt;)
+### force-require(&lt;String&gt;, [cb])
 
-Try to load a dependency based in the name. Internally the library follow the next algorithm:
+Try to load a dependency based in the name. If `cb` is provided then the call will be resolved follow async interface.
+
+Internally the library follow the next algorithm:
 
 1) Try to require the dependency locally. This means that exists in the current `process.cwd()/node_modules` folder
 as direct dependency or a dependency of another dependency.
