@@ -14,7 +14,7 @@ describe 'forceRequire ::', ->
   after deleteAssets
   before deleteAssets
 
-  describe 'basics', ->
+  describe 'unit', ->
 
     it "require a dependency that exist locally", ->
       dep = forceRequire 'mocha'
@@ -28,7 +28,7 @@ describe 'forceRequire ::', ->
       dep = forceRequire 'force-require-test'
       (typeof dep.hello).should.be.equal 'function'
 
-  describe 'advanced', ->
+  describe 'integration', ->
 
     it 'async mode', (done) ->
       forceRequire 'mocha', done
