@@ -1,7 +1,19 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2015-10-04)
+
+
+* async documentation ([e4ef8c1](https://github.com/kikobeats/force-require/commit/e4ef8c1))
+* fixed little bugs ([97405ec](https://github.com/kikobeats/force-require/commit/97405ec))
+* Update README.md ([1875e73](https://github.com/kikobeats/force-require/commit/1875e73))
+* updated algorithm ([581ee8e](https://github.com/kikobeats/force-require/commit/581ee8e))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2015-10-04)
 
 
+* 1.1.0 releases ([5db6f4c](https://github.com/kikobeats/force-require/commit/5db6f4c))
 * async support ([c671d30](https://github.com/kikobeats/force-require/commit/c671d30))
 * renaming tests ([48a8401](https://github.com/kikobeats/force-require/commit/48a8401))
 * updated donate button ([6aafffb](https://github.com/kikobeats/force-require/commit/6aafffb))
