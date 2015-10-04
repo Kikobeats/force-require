@@ -1,6 +1,6 @@
 # Force Require
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/parse-json.svg?style=flat-square)
+![Last version](https://img.shields.io/github/tag/Kikobeats/force-require.svg?style=flat-square)
 [![Build Status](http://img.shields.io/travis/Kikobeats/force-require/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/force-require)
 [![Dependency status](http://img.shields.io/david/Kikobeats/force-require.svg?style=flat-square)](https://david-dm.org/Kikobeats/force-require)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/Kikobeats/force-require.svg?style=flat-square)](https://david-dm.org/Kikobeats/force-require#info=devDependencies)
